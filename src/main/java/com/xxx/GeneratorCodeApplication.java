@@ -13,7 +13,7 @@ import tk.mybatis.spring.annotation.MapperScan;
 import java.net.InetAddress;
 
 @SpringBootApplication
-@MapperScan("com.qunyi.jifenzhi_zx.*.dao")
+@MapperScan("com.xxx.*.dao")
 @EnableAutoConfiguration
 @EnableScheduling
 public class GeneratorCodeApplication {
