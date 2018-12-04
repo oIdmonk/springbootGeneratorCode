@@ -1,0 +1,46 @@
+########################### 项目基本公共信息配置###########################
+##服务名
+spring:
+  application:
+    name: generatorcode-provider
+
+##选择数据源
+  profiles:
+    active: dev   #test(测试环境)  dev(开发环境)  prod(生产环境)
+
+#出现错误时, 直接抛出异常(便于异常统一处理，否则捕获不到404)
+  mvc:
+    throw-exception-if-no-handler-found: true
+
+#不要为我们工程中的资源文件建立映射
+  resources:
+    add-mappings: false
+
+## mybatis 配置
+mybatis:
+  type-aliases-package: com.xxx.modules.**.model                    #model扫描
+  mapper-locations: classpath*:com/xxx/**/mapper/*.xml     #mapping扫描器
+  configuration:
+      call-setters-on-nulls: true  #设置返回值为Map类型，保留key
+      log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+#pagehelper分页插件
+pagehelper:
+    helperDialect: mysql
+    reasonable: true
+    supportMethodsArguments: true
+    params: count=countSql
+
+
+## 日志 输出 配置
+logging:
+  path: logs/generatorcode-provider/
+  level:
+    com.xxx.module.dao: debug
+    root: info  #ALL(所有级别) DEBUG(调试级别) ERROR(错误级别)  FATAL(严重错误级别) INFO(信息级别) OFF(关闭日志) TRACE(比debug更细) WARN(警告级别)
+
+
+
+
+#项目常量
