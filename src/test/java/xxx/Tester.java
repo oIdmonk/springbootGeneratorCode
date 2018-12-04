@@ -1,4 +1,4 @@
-package qunyi.jifenzhi;
+package xxx;
 
 
 import com.xxx.GeneratorCodeApplication;
