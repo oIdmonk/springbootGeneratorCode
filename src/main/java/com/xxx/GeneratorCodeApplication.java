@@ -23,6 +23,7 @@ public class GeneratorCodeApplication {
     public static void main(String[] args) throws Exception {
         ConfigurableApplicationContext application = SpringApplication.run(GeneratorCodeApplication.class, args);
         Environment env = application.getEnvironment();
+
         logger.info("\n----------------------------------------------------------\n\t" +
                         "Application '{}' is running! Access URLs:\n\t" +
                         "Local: \t\thttp://localhost:{}\n\t" +
